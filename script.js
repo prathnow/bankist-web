@@ -38,3 +38,13 @@ const section1 = document.querySelector('#section--1');
 btnScrollTo.addEventListener('click', () =>
   section1.scrollIntoView({ behavior: 'smooth' })
 );
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  if (e.target.classList.contains('nav__link')) {
+    document
+      .querySelector(e.target.getAttribute('href'))
+      .scrollIntoView({ behavior: 'smooth' });
+  }
+});
