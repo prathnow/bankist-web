@@ -93,7 +93,6 @@ const navHeight = nav.getBoundingClientRect().height;
 
 const stickyNav = function (entries) {
   const [entry] = entries;
-  console.log(entry);
   !entry.isIntersecting
     ? nav.classList.add('sticky')
     : nav.classList.remove('sticky');
